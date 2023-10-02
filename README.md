@@ -1,3 +1,11 @@
+# Balance Calc Experimental
+TODO:
+- Add routing
+- Add authentication (fake API) and auth guard for pages that need authentication
+- Add styling + css frameworks (tailwind?)
+- Add theme (optional)
+- Implement features (login, dashboard, etc,.)
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
