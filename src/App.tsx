@@ -1,15 +1,21 @@
 import './App.css';
-import moneyTreeLogo from './assets/money-tree.svg';
-import MainLayout from './layouts/MainLayout';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
+import Login from './pages/Login';
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
   return (
-    <MainLayout>
-      <h1 className="text-3xl font-bold underline text-red-500">
-        Title
-      </h1>
-      <img src={moneyTreeLogo} className="logo" alt="Money" width={100} />
-    </MainLayout>
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <PrivateRoute path="/dashboard" element={<Dashboard />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
